@@ -1,0 +1,21 @@
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+section.row{
+    height: 600px;
+}
+
+div#users-contact{
+    background-color: bisque;
+}
+
+div#user-chat{
+    background-color: rgb(153, 102, 40);
+}
+
+div.header-chat,
+div.footer-chat{
+    height: 50px;
+    background-color: aquamarine;
+}
