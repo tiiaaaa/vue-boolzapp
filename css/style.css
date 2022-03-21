@@ -6,29 +6,49 @@ main{
     height: 100vh;
 }
 
-/* Colonna destra e colonna sinistra */
+/* CLASSI GENERALI */
+div.avatar-img{
+    width: 45px;
+    height: 45px;
+}
+
+div.user-text-info p{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+div.user-text-info a{
+    font-size: 0.7rem
+}
+
+div.account-option i{
+    color: rgb(194, 186, 186);
+}
+
+/* COLONNA DESTRA E COLONNA SINISTRA*/
 section#users-contact,
 section#user-chat{
-    height: 90vh;
+    height: 95vh;
 }
 
 section#users-contact{
     background-color: bisque;
+    border-right: 1px solid black;
 }
 
 section#user-chat{
     background-color: rgb(153, 102, 40);
 }
 
-/* Banner delle notifiche */
+/* BANNER DELLE NOTIFICHE */
 div.notification-banner{
     background-color: rgb(0, 204, 255);
 }
 
 div.notification-banner span#notification-icon{
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     background-color: white;
     border-radius: 50%;
 }
@@ -44,23 +64,34 @@ div.notification-banner div#notification-text{
     font-size: 0.7rem;
 }
 
-img.avatar-img{
-    width: 15%;
-    border-radius: 50%;
-}
-
-/* Colonna di destra */
+/* COLONNA DESTRA */
 div.header-user-chat,
 div.footer-user-chat{
-    height: 55px;
+    height: 60px;
     background-color: aquamarine;
 }
 
+/* SEZIONE CENTRALE  */
 section#user-chat div.main-user-chat{
-    height: calc(100% - 110px);
+    height: calc(100% - 120px);
     background-color: blue;
 }
 
+div.main-user-chat div.message{
+    height: 45px;
+} 
+
+div.main-user-chat div.received-message{
+    background-color: white;
+}
+
+div.message span{
+    font-size: 0.8rem;
+}
+
+
+
+/* SEZIONE BASSA */
 div.footer-user-chat input{
-    width: 80%;
+    width: 85%;
 }
