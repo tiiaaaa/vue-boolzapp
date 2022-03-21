@@ -2,31 +2,65 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 
-div#users-contact,
-div#user-chat{
+main{
+    height: 100vh;
+}
+
+/* Colonna destra e colonna sinistra */
+section#users-contact,
+section#user-chat{
     height: 90vh;
 }
 
-div#users-contact{
+section#users-contact{
     background-color: bisque;
 }
 
-div#user-chat{
+section#user-chat{
     background-color: rgb(153, 102, 40);
 }
 
-div.header-chat,
-div.footer-chat{
-    height: 50px;
-    background-color: aquamarine;
-}
-
+/* Banner delle notifiche */
 div.notification-banner{
-    height: 60px;
+    background-color: rgb(0, 204, 255);
 }
 
+div.notification-banner span#notification-icon{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+div.notification-banner span#notification-icon i.fa-bell-slash{
+    left: 50%;
+    top: 50%;
+    color: rgb(0, 204, 255);
+    transform: translate(-50%, -50%);
+}
+
+div.notification-banner div#notification-text{
+    font-size: 0.7rem;
+}
 
 img.avatar-img{
     width: 15%;
     border-radius: 50%;
+}
+
+/* Colonna di destra */
+div.header-user-chat,
+div.footer-user-chat{
+    height: 55px;
+    background-color: aquamarine;
+}
+
+section#user-chat div.main-user-chat{
+    height: calc(100% - 110px);
+    background-color: blue;
+}
+
+div.footer-user-chat input{
+    width: 80%;
 }

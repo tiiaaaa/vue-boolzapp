@@ -23,13 +23,27 @@
     <title>Vue Boolzapp</title>
 </head>
 <body>
-    <main>
+    <main class="d-flex align-items-center">
         <div class="container">
             <section class="row">
-                <div id="users-contact" class="col-4 d-flex flex-column p-0">
-                    <section id="top-left">
-                        <div class="header-chat"></div>
-                        <div class="notification-banner"></div>
+                <!-- Colonna Sinistra -->
+                <section id="users-contact" class="col-4 d-flex flex-column p-0">
+                    <div class="header-user-chat"></div>
+                    <!-- Colonna sinistra delle chat parte in alto -->
+                    <section id="users-contact-top">
+                        <!-- Banner Notifiche -->
+                        <div class="notification-banner d-flex p-3">
+                            <span id="notification-icon" class="position-relative me-3">
+                                <i class="fas fa-bell-slash position-absolute"></i>
+                            </span>
+
+                            <div id="notification-text">
+                                <p class="m-0 fw-bold">Ricevi notifiche di nuovi messaggi</p>
+                                <a class="text-decoration-none text-muted" href="#">Attiva notifiche desktop</a>
+                            </div>
+
+                        </div>
+
                         <div class="input-search-contact p-2">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -38,7 +52,7 @@
                         </div>
                     </section>
 
-                    <section id="bottom-left">
+                    <section id="users-contact-bottom" class="overflow-auto">
                         <div class="chat-list">
                             <ul class="list-group">
                                 <li class="list-group-item d-flex justify-content-between">
@@ -50,18 +64,38 @@
                                 </li>
                                 <li class="list-group-item">A second item</li>
                                 <li class="list-group-item">A third item</li>
-                                <li class="list-group-item">A fourth item</li>
-                                <li class="list-group-item">And a fifth one</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A second item</li>
                             </ul>
                         </div>
                     </section>
-                </div>
-
-                <div id="user-chat" class="col-8 d-flex flex-column justify-content-between p-0">
-                    <div class="header-chat"></div>
-                    <div class="footer-chat"></div>
+                </section>
+                
+                <!-- Colonna Destra -->
+                <section id="user-chat" class="col-8 position-relative p-0">
+                    <!-- Barra in alto -->
+                    <div class="header-user-chat"></div>
                     
-                </div>
+                    <!-- Corpo centrale della chat -->
+                    <div class="main-user-chat"></div>
+                    
+                    <!-- Barra in basso della chat -->
+                    <div class="footer-user-chat d-flex justify-content-evenly align-items-center p-2">
+                        <div>
+                            <a class="text-decoration-none text-muted" href="#"><i class="fa-regular fa-face-grin"></i></a>
+                        </div>
+                        <!-- Input per digitare il testo -->
+                        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                        
+                        <div>
+                            <a class="text-decoration-none text-muted" href="#"><i class="fas fa-microphone"></i></a>
+                        </div>
+                    </div>
+                    
+                </section>
             </section>
         </div>
     </main>
