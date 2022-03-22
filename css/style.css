@@ -130,6 +130,12 @@ div.main-user-chat div.message{
     /* height: 50px; */
 } 
 
+span.message-time{
+    bottom: 0.2rem;
+    right: 0.3rem;
+    font-size: 0.5rem;
+}
+
 div.message.received-message{
     background-color: white;
 }
@@ -139,7 +145,7 @@ div.message.send-message{
     align-self: flex-end;
 }
 
-div.message span{
+div.message span.message-text{
     font-size: 0.8rem;
 }
 
