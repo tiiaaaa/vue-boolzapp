@@ -11,6 +11,12 @@ div.container{
     min-width: 1000px;
 }
 
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* CLASSI GENERALI */
 div.avatar-img{
     width: 45px;
@@ -109,20 +115,24 @@ footer.input-message-bar{
 
 /* SEZIONE CENTRALE  */
 section#user-chat div.main-user-chat{
+    width: 100%;
     height: calc(100% - 120px);
     background-image: url("../img/mine.jpg");
 }
 
 div.main-user-chat div.message{
-    min-width: 200px ;
+    width: 50%;
+    min-width: 200px;
+    /* height: 50px; */
 } 
 
-div.main-user-chat div.received-message{
+div.message.received-message{
     background-color: white;
 }
 
-div.main-user-chat div.send-message{
+div.message.send-message{
     background-color: lightgreen;
+    align-self: flex-end;
 }
 
 div.message span{
