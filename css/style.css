@@ -95,6 +95,7 @@ section#users-contact div#chat-list{
 }
 
 div#chat-list div.list-item{
+    cursor: pointer;
     background-color: white;
 }
 

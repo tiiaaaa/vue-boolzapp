@@ -71,10 +71,10 @@
                     <!-- Lista dei contatti -->
                     <div id="chat-list" class="overflow-auto">
                         <!-- Singolo contatto -->
-                        <div class="list-item d-flex justify-content-between py-2 px-3" v-for="(element, index) in contacts">
+                        <div class="list-item d-flex justify-content-between py-2 px-3" v-for="(element, index) in contacts" @click="">
                             <div class="avatar d-flex">
                                 <div class="avatar-img me-3">
-                                    <img class="img-fluid rounded-circle" src="" alt="">
+                                    <img class="img-fluid rounded-circle" :src="element.avatar" alt="Immage of User">
                                 </div>
                                 <div class="avatar-info">
                                     <p class="mb-0">{{element.name}}</p>
@@ -117,14 +117,10 @@
                     <!-- Corpo centrale della chat -->
                     <div class="main-user-chat d-flex flex-column overflow-auto p-5">
                         <!-- Col sinistra messaggi in arrivo -->
-                        <div class="message rounded-3 p-2 mb-3 position-relative send-message">
+                        <div class="message rounded-3 p-2 mb-3 position-relative send-message" v-for="">
                             <span class="message-text">Hai portato a spasso il cane?</span>
                     
                             <span class="message-time position-absolute">12.00</span>
-                        </div>
-
-                        <div class="message rounded-3 p-2 mb-3 received-message">
-                            <span>si</span>
                         </div>
                     </div>
                     
