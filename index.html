@@ -23,19 +23,19 @@
     <title>Vue Boolzapp</title>
 </head>
 <body>
-    <main class="d-flex align-items-center">
+    <main id="app" class="d-flex align-items-center">
         <div class="container">
             <section class="row">
                 <!-- Colonna Sinistra -->
                 <section id="users-contact" class="col-4 d-flex flex-column p-0">
                     <!-- Barra profilo -->
-                    <div class="header-user-chat d-flex justify-content-between p-2">
+                    <header class="user-bar d-flex justify-content-between p-2">
                         <div class="account-description d-flex">
                             <div class="avatar-img me-2">
-                                <img class="img-fluid rounded-circle" src="img/avatar_1.jpg" alt="">
+                                <img class="img-fluid rounded-circle" src="img/avatar_io.jpg" alt="">
                             </div>
                             <div class="user-text-info d-flex align-items-center">
-                                <p class="mb-0">Mattia</p>
+                                <p class="mb-0">Sofia</p>
                             </div>
                         </div>
                         <!-- Icone sulla sinistra -->
@@ -46,67 +46,60 @@
                         
                             <a class="text-decoration-none text-muted fs-5" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>                            </i></a>
                         </div>
+                    </header>
+                    
+                    <!-- Banner Notifiche -->
+                    <div class="notification-banner d-flex p-3">
+                        <span id="notification-icon" class="position-relative me-3">
+                            <i class="fas fa-bell-slash position-absolute"></i>
+                        </span>
+
+                        <div id="notification-text">
+                            <p class="m-0 fw-bold">Ricevi notifiche di nuovi messaggi</p>
+                            <a class="text-decoration-none text-muted" href="#">Attiva notifiche desktop</a>
+                        </div>
                     </div>
                     
-                    <!-- Colonna sinistra delle chat parte in alto -->
-                    <section id="users-contact-top">
-                        <!-- Banner Notifiche -->
-                        <div class="notification-banner d-flex p-3">
-                            <span id="notification-icon" class="position-relative me-3">
-                                <i class="fas fa-bell-slash position-absolute"></i>
-                            </span>
-
-                            <div id="notification-text">
-                                <p class="m-0 fw-bold">Ricevi notifiche di nuovi messaggi</p>
-                                <a class="text-decoration-none text-muted" href="#">Attiva notifiche desktop</a>
+                    <!-- Input di ricerca contatti -->
+                    <div class="input-search-contact p-2">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+                    
+                    <!-- Lista dei contatti -->
+                    <div id="chat-list" class="overflow-auto">
+                        <!-- Singolo contatto -->
+                        <div class="list-item d-flex justify-content-between py-2 px-3 active">
+                            <div class="avatar d-flex">
+                                <div class="avatar-img me-3">
+                                    <img class="img-fluid rounded-circle" src="img/avatar_1.jpg" alt="">
+                                </div>
+                                <div class="avatar-info">
+                                    <p class="mb-0">Michele</p>
+                                    <span>Ultimo messaggio inviato</span>
+                                </div>
                             </div>
-
-                        </div>
-
-                        <div class="input-search-contact p-2">
-                            <div class="input-group input-group-sm">
-                                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                            <div class="time">
+                                <span>12.00</span>
                             </div>
                         </div>
-                    </section>
-
-                    <section id="users-contact-bottom" class="overflow-auto">
-                        <div class="chat-list">
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <div class="left">
-                                        <div class="avatar-img d-inline-block">
-                                            <img class="img-fluid rounded-circle" src="img/avatar_1.jpg" alt="">
-                                        </div>
-                                        <span>nome</span>
-                                    </div>
-                                    <div class="right">12.00</div>
-                                </li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                                <li class="list-group-item">A second item</li>
-                            </ul>
-                        </div>
-                    </section>
+                    </div>
                 </section>
                 
                 <!-- Colonna Destra -->
                 <section id="user-chat" class="col-8 position-relative p-0">
 
                     <!-- Barra in alto -->
-                    <div class="header-user-chat d-flex justify-content-between py-2 px-4">
+                    <header class="top-user-bar d-flex justify-content-between py-2 px-4">
                         <!-- Icona e testo sulla destra -->
                         <div class="account-description d-flex">
                             <div class="avatar-img me-2">
                                 <img class="img-fluid rounded-circle" src="img/avatar_1.jpg" alt="">
                             </div>
                             <div class="user-text-info">
-                                <p class="mb-0">Mamma</p>
+                                <p class="mb-0">Michele</p>
                                 <a class="text-decoration-none text-muted" href="#">Ultimo accesso oggi alle 12.00</a>
                             </div>
                         </div>
@@ -119,7 +112,7 @@
                         
                             <a class="text-decoration-none text-muted fs-5" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>                            </i></a>
                         </div>
-                    </div>
+                    </header>
                     
                     <!-- Corpo centrale della chat -->
                     <div class="main-user-chat d-flex overflow-auto">
@@ -135,7 +128,7 @@
                     </div>
                     
                     <!-- Barra in basso della chat -->
-                    <div class="footer-user-chat d-flex justify-content-evenly align-items-center p-2">
+                    <footer class="input-message-bar d-flex justify-content-evenly align-items-center p-2">
                         <div>
                             <a class="text-decoration-none text-muted fs-5" href="#"><i class="fa-regular fa-face-grin"></i></a>
                         </div>
@@ -145,7 +138,7 @@
                         <div>
                             <a class="text-decoration-none text-muted fs-5" href="#"><i class="fas fa-microphone"></i></a>
                         </div>
-                    </div>
+                    </footer>
                     
                 </section>
             </section>

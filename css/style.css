@@ -4,6 +4,11 @@ body{
 
 main{
     height: 100vh;
+    background-color: rgb(248, 219, 182);
+}
+
+div.container{
+    min-width: 1000px;
 }
 
 /* CLASSI GENERALI */
@@ -32,7 +37,6 @@ section#user-chat{
 }
 
 section#users-contact{
-    background-color: bisque;
     border-right: 1px solid black;
 }
 
@@ -40,9 +44,17 @@ section#user-chat{
     background-color: rgb(153, 102, 40);
 }
 
+/* USER BAR */
+section#users-contact header.user-bar{
+    height: 60px;
+    background-color: rgb(243, 243, 243);;
+}
+
+
 /* BANNER DELLE NOTIFICHE */
 div.notification-banner{
-    background-color: rgb(0, 204, 255);
+    background-color: rgb(108, 220, 248);
+    height: 75px;
 }
 
 div.notification-banner span#notification-icon{
@@ -64,25 +76,53 @@ div.notification-banner div#notification-text{
     font-size: 0.7rem;
 }
 
+/* SEARCH BAR */
+div.input-search-contact{
+    height: 50px;
+    background-color: rgb(243, 243, 243);
+}
+
+/* CHATLIST */
+section#users-contact div#chat-list{
+    height: calc(100% - 185px);
+    background-color: white;
+}
+
+div#chat-list div.list-item{
+    background-color: white;
+}
+
+div.list-item div.avatar-info span{
+    font-size: 0.6rem;
+}
+
+div.list-item div.time span{
+    font-size: 0.6rem;
+}
+
 /* COLONNA DESTRA */
-div.header-user-chat,
-div.footer-user-chat{
+header.top-user-bar,
+footer.input-message-bar{
     height: 60px;
-    background-color: aquamarine;
+    background-color: rgb(243, 243, 243);
 }
 
 /* SEZIONE CENTRALE  */
 section#user-chat div.main-user-chat{
     height: calc(100% - 120px);
-    background-color: blue;
+    background-image: url("../img/mine.jpg");
 }
 
 div.main-user-chat div.message{
-    height: 45px;
+    min-width: 200px ;
 } 
 
 div.main-user-chat div.received-message{
     background-color: white;
+}
+
+div.main-user-chat div.send-message{
+    background-color: lightgreen;
 }
 
 div.message span{
@@ -90,8 +130,12 @@ div.message span{
 }
 
 
-
 /* SEZIONE BASSA */
-div.footer-user-chat input{
+footer.input-message-bar input{
     width: 85%;
+}
+
+/* CLASSI ACTIVE */
+div#chat-list div.list-item.active{
+    background-color: lightgray;
 }
